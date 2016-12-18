@@ -1,0 +1,7 @@
+by\njunko\voting\config\AppInitializer.class
+by\njunko\voting\dao\CandidateDao.class
+by\njunko\voting\config\AppConfig.class
+by\njunko\voting\model\Candidate.class
+by\njunko\voting\sheduling\TaskSendingStatistics.class
+by\njunko\voting\db\DBWorker.class
+by\njunko\voting\controller\CandidateController.class

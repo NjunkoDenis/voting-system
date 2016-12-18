@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="voting-system:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="voting.war">
+      <element id="artifact" artifact-name="voting-system:war exploded" />
+    </root>
+  </artifact>
+</component>

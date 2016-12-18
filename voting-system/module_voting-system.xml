@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_voting-system" default="compile.module.voting-system">
+  <dirname property="module.voting-system.basedir" file="${ant.file.module_voting-system}"/>
+  
+  <property name="module.jdk.home.voting-system" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.voting-system" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.voting-system" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.voting-system" value="-encoding windows-1251 -source 1.5 -target 1.5 ${compiler.args}"/>
+  
+  <property name="voting-system.output.dir" value="${module.voting-system.basedir}/target/classes"/>
+  <property name="voting-system.testoutput.dir" value="${module.voting-system.basedir}/target/test-classes"/>
+  
+  <path id="voting-system.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="voting-system.module.production.classpath">
+    <path refid="${module.jdk.classpath.voting-system}"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.31.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.1.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.1.release.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.7.5.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.7.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.7.5.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  <path id="voting-system.runtime.production.module.classpath">
+    <pathelement location="${voting-system.output.dir}"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.31.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.1.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.1.release.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.7.5.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.7.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.7.5.classpath"/>
+  </path>
+  
+  <path id="voting-system.module.classpath">
+    <path refid="${module.jdk.classpath.voting-system}"/>
+    <pathelement location="${voting-system.output.dir}"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.31.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.1.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.1.release.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.7.5.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.7.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.7.5.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  <path id="voting-system.runtime.module.classpath">
+    <pathelement location="${voting-system.testoutput.dir}"/>
+    <pathelement location="${voting-system.output.dir}"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.31.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.1.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:4.3.1.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:4.3.1.release.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.7.5.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.7.0.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.7.5.classpath"/>
+    <path refid="library.maven:_javax.servlet:javax.servlet-api:3.0.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.voting-system">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.voting-system">
+    <patternset refid="excluded.from.module.voting-system"/>
+  </patternset>
+  
+  <path id="voting-system.module.sourcepath">
+    <dirset dir="${module.voting-system.basedir}">
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="voting-system.module.test.sourcepath">
+    <dirset dir="${module.voting-system.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.voting-system" depends="compile.module.voting-system.production,compile.module.voting-system.tests" description="Compile module voting-system"/>
+  
+  <target name="compile.module.voting-system.production" depends="register.custom.compilers" description="Compile module voting-system; production classes">
+    <mkdir dir="${voting-system.output.dir}"/>
+    <javac2 destdir="${voting-system.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.voting-system}/javac">
+      <compilerarg line="${compiler.args.voting-system}"/>
+      <bootclasspath refid="voting-system.module.bootclasspath"/>
+      <classpath refid="voting-system.module.production.classpath"/>
+      <src refid="voting-system.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.voting-system"/>
+    </javac2>
+    
+    <copy todir="${voting-system.output.dir}">
+      <fileset dir="${module.voting-system.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.voting-system.tests" depends="register.custom.compilers,compile.module.voting-system.production" description="compile module voting-system; test classes" unless="skip.tests">
+    <mkdir dir="${voting-system.testoutput.dir}"/>
+    <javac2 destdir="${voting-system.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.voting-system}/javac">
+      <compilerarg line="${compiler.args.voting-system}"/>
+      <bootclasspath refid="voting-system.module.bootclasspath"/>
+      <classpath refid="voting-system.module.classpath"/>
+      <src refid="voting-system.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.voting-system"/>
+    </javac2>
+    
+    <copy todir="${voting-system.testoutput.dir}">
+      <fileset dir="${module.voting-system.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.voting-system" description="cleanup module">
+    <delete dir="${voting-system.output.dir}"/>
+    <delete dir="${voting-system.testoutput.dir}"/>
+  </target>
+</project>
